@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Login Page</title>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+         
+  {% load static %} <script src="{% static 'css/login.js' %}" ></script>
+
+</head>
+{% load static %} <body id="bg" style="background-image: url('{% static 'css/dj_images/images/loginback.jpg' %}');">  
+
+<br><br><br><br>
+
+<h2>Login Form</h2>
+
+  <form method="post" action="/signin" >
+
+  <div class="container">
+    {% csrf_token %}
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+    <label for="pass1"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pass1" id="password"  required>
+    
+    <button type="submit" class="btn btn-primary">Log In</button>
+    
+    
+  </div>
+
+  <div class="container" style="background-color:#fdfdfd">
+
+    <span class="pass1">Forgot <a href="#">password?</a></span>
+    <br><br>
+    <span class="pass1">Don't have an account? <a href="/signup">SignUp</a></span>
+  </div>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+	<title>Harishini Portfolio</title>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" >
+
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+         
+    {% load static %} <script src="{% static 'css/script.js' %}" ></script>
+	
+</head>
+<body>
+
+	
+	{% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+
+
+
+	{% if user.is_authenticated %}
+    <h5>Hello {{fname}}!</h5>
+    <h6>You're successfully logged in.</h6>
+	<section class="s1">
+		<div class="main-container">
+			<div class="greeting-wrapper">
+				<h1>Hi, I'm  Harishini</h1>
+			</div>
+
+
+			<div class="intro-wrapper">
+				<div class="nav-wrapper">
+
+					<!-- Link around dots-wrapper added after tutorial video -->
+					<a href="index.html">
+						<div class="dots-wrapper">
+							<div id="dot-1" class="browser-dot"></div>
+							<div id="dot-2" class="browser-dot"></div>
+							<div id="dot-3" class="browser-dot"></div>
+						</div>
+					</a>
+					<div class="topnav" id="myTopnav">
+						<a href="#home" class="active"><i class="fa fa-fw fa-home"></i> Home</a>
+					    <a href="#about_me"><i class ="fa fa-user"></i> About Me</a>                                                
+						<a href="#my_works"><i class ="fa fa-book"></i> My Works</a>
+						<a href="#contact"><i class ="fa fa-phone"></i> Contact</a>  
+						<a href="/signout"><i class ="fa fa-sign-out"></i> Logout</a>   
+
+						 <a href="#javascript:void(0);" class="icon" onclick="myFunc1()">
+						  <i class="fa fa-bars"></i>
+						  </a>
+					 </div> 
+					
+				
+				</div>
+
+				<div class="left-column">
+
+                    {% load static %} <img  id="profile_pic" src="{% static "css/dj_images/images/Haripic.jpg" %}" alt="home" />
+					
+                    <br>
+					<h5 style="text-align: center;line-height: 0;">Harishini.S</h5>
+
+					
+
+					
+				</div>
+
+				<div class="right-column">
+
+					<div id="preview-shadow">
+						<div id="preview">
+							<div id="corner-tl" class="corner"></div>
+							<div id="corner-tr" class="corner"></div>
+							<h3>What I Do</h3>
+							<p>I'm currently pursuing B.E-COMPUTER SCIENCE in Kumaraguru College of Technology,
+								Coimbatore.</p>
+							<div id="corner-br" class="corner"></div>
+							<div id="corner-bl" class="corner"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a id="about_me" name="about_me"></a>
+			<div class="about-wrapper">
+				<div class="about-me">
+					<h4>About Me</h4>
+					<br>
+
+					<p>I'm an aspiring engineering student aiming to secure a responsible career opportunity 
+                        in the field of software to fully utilize my training and skills,
+                        while making a significant contribution to the success of the organisation and myself.</p>
+                    <br>
+					<strong>Educational Qualification:</strong>
+					<p>Seconadray Education   2018-2020</p>
+					<p>Undergaduate:B.E-CSE   2020-2024</p>
+
+					<strong>Certifications:</strong>
+					<ul style="list-style-type: circle;">
+						<li>MTA Python Exam</li>
+						<li>AI with Python </li>
+						<li>SQL(Basic) from HackerRank</li>
+					</ul>
+					<strong>Hobbies:</strong>
+					<ul style="list-style-type: circle;">
+					<li>badminton</li>
+					<li>cycling</li>
+					<li>Listen Music</li>
+					</ul>
+
+
+					<hr>
+
+					<h4>SKILLS</h4>
+
+					<div id="skills">
+						
+						<ul style="list-style-type:square;">
+							
+							<li>Communication</li>
+							<li>Critical Thinking</li>
+							<li>Problem Solving</li>
+							<li>Technical ability</li>
+							<li>Programming languages:</li>
+						   <ul style="list-style-type: circle;">
+							 <li>C</li>
+							 <li>C++</li>
+							 <li>Python</li>
+							 <li>Java</li>
+						</ul>
+					</ul> 
+				<ul style="list-style-type:square;">
+					<li>Web Development:</li>
+					  <ul style="list-style-type: circle;">
+						 <li>HTML/CSS</li>
+						 <li>Javascript</li>
+						 <li>Bootstrap</li>
+					  </ul>
+				</ul>
+
+					</div>
+
+				</div>
+
+				
+				<div class="social-links">
+					<h2>Find me on <i class="fa fa-handshake-o"></i></h2>
+
+					<i class="fa fa-linkedin-square" style="font-size:35px;color:rgb(3, 127, 209)"></i>
+					<a target="_blank" href="https://www.linkedin.com/in/harishini-s-b4918b203">LinkedIn: @Harishini</a>
+					<br>
+					<i class="fa fa-github" style="font-size:35px;color:black"></i>
+					<a target="_blank" href="https://github.com/">Github: @Harishini</a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="s1">
+		<div class="main-container">
+			<a id="my_works" name="works"></a>
+			<h3 style="text-align: center;">My Academic Works</h3>
+			<br>
+
+			<div class="post-wrapper">
+
+				<div>
+					<div class="post">
+                        {% load static %} <img  class="thumbnail" src="{% static "css/dj_images/images/travel.jpg" %}" alt="home" />
+						<!--<img class="thumbnail" src="travel.jpg"> -->
+						<div class="post-preview">
+							<h6 class="post-title">Travel Website</h6>
+							<p class="post-intro">Designed a static travel website with an enquiry 
+								form using HTML,CSS,Bootstrap<span id="dots">...</span>
+								<span id="more">and Javascript.It is a static mobile responsive website which has a basic information.
+									about the tourist places Dubai and Singapore.	
+						<br><br>
+						<a href="https://harishini.github.io/Travel/index.html">Website Link</a></span></p>
+								<button onclick="myFunction()" id="myBtn">Read more</button>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+                        {% load static %} <img  class="thumbnail" src="{% static "css/dj_images/images/mask.jpg" %}" alt="home" />
+					<!--<img class="thumbnail" src="mask.jpg"> -->
+						<div class="post-preview">
+							<h6 class="post-title">Corona Facemask Detection</h6>
+							<p class="post-intro">Developed an AI/ML project to detect face mask 
+								using ANN(Artificial Neural Network).<span id="dots1">..</span>
+								<span id="more1">I used Anaconda jupyter notebook and google colab 
+									to train and test this project.</span></p>
+								<button onclick="myFunction1()" id="myBtn1">Read more</button>
+						
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="post">
+                        {% load static %} <img  class="thumbnail" src="{% static "css/dj_images/images/portpic.jpg" %}" alt="home" />
+						<!--<img class="thumbnail" src="portpic.jpg">-->
+						<div class="post-preview">
+							<h6 class="post-title">Portfolio Website</h6>
+							<p class="post-intro">Designed this current personal portfolio website with an additional contact
+								form using<span id="dots2">...</span>
+								<span id="more2">HTML,CSS.It is a responsive website made using Bootstrap and Javascript.								
+								</span></p>
+
+							<button onclick="myFunction2()" id="myBtn2">Read more</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="s2">
+		<div class="main-container">
+			<a href=""></a>
+			<h3 style="text-align: center;">Get In Touch</h3>
+			<form id="contact-form" class="was-validated" method="post" action="/index">
+				{% csrf_token %}
+		
+				<a id="contact_info" name="contact"></a>
+
+				<label for="name">Name</label>
+				<input class="form-control"   id="name"type="text" name="name" required>
+
+				<label>Email</label>
+				<input class="form-control"  id="email" type="text" name="email" aria-describedy="emailHelp"  required>
+
+				<label>Subject</label>
+				<input class="form-control"  id="subject" type="text" name="subject" required>
+
+				<input id="submit-btn" type="submit" value="Send">
+			</form>
+		</div>
+	</section> 
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	<!--{% else %}
+
+
+   <br><br><br><br>
+  
+    <button type="submit" id="button1" ><a href="/signup"><span>SignUp</span></a></button>
+	<br>
+	<br>
+	<br>
+   
+	<button type="submit" id="button2"><a href="/signin"><span>SignIn</span></a></button>-->
+    {% endif %}
+
+</body>
+</html>
