@@ -1,1 +1,1 @@
-web: gunicorn my_django_port.wsgi: --log-file-
+web: waitress-serve --port=$PORT my_django_port.wsgi:application 
