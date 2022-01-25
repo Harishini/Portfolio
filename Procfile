@@ -1,1 +1,1 @@
-web: waitress-serve --port=8000 my_django_port.wsgi:application
+web: gunicorn my_django_port.wsgi:--log-file-
